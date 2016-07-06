@@ -67,6 +67,10 @@
     <!-- Angular Cards -->
    <link rel="stylesheet" href="node_modules/angular-swing/examples/card-stack/card-stack.css">
     <link rel="stylesheet" href="node_modules/angular-swing/examples/card-stack/card-stack.scss">
+    
+    <!-- Loader -->
+    
+    <link rel="stylesheet" href="css/fakeLoader.css">
     <!-- Scroll Magic -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
@@ -77,6 +81,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="node_modules/angular-swing/examples/card-stack/card-stack.js"></script>
     <script src="node_modules/angular-swing/dist/swing.js"></script>
+    
+    <script src="js/fakeLoader.min.js"></script>
     <!-- FOR IE9 below -->
     <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -85,8 +91,8 @@
 </head>
 
 <body>
-
-
+    
+    <div id="fakeLoader"></div>
 
     <div id="what-page">
         <div id="what-wrap">
@@ -114,6 +120,41 @@
                 </div>
             </header>
             <!-- END .header -->
+        </div>
+        
+        <nav id="custom-bootstrap-menu" class="navbar navbar-default">
+<div class="container-fluid">
+
+<!-- BRAND -->
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#alignment-example" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="#">What is News?</a>
+</div>
+
+<!-- COLLAPSIBLE NAVBAR -->
+<div class="collapse navbar-collapse" id="alignment-example">
+
+<!-- Links -->
+<ul class="nav navbar-nav">
+<li><a href="#what-features">Who?</a></li>
+<li><a href="#what-testimony">What?</a></li>
+<li class="dropdown">
+<a href="#what-features-2" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">When <span class="caret"></span></a>
+<ul class="#dropdown-menu" aria-labelledby="about-us">
+<li><a href="#what-hero-intro">Opinion Game</a></li>
+    </ul>
+    </li>
+    <li><a href="#">Where?</a></li>
+    <li><a href="#">Why?</a></li>
+    <li><a href="#what-footer">How?</a></li>
+    </ul>
+    </div>
+    </nav>
 
             <div id="what-features" data-section="features">
 
@@ -122,13 +163,13 @@
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 what-section-heading text-center">
                             <h2 class="what-lead to-animate">Who is a Journalist?</h2>
-                            <p class="what-sub to-animate">Although journalism can be done by anyone, a journalist not only gathers information but they use certain methods to verify and assess what they find.</p>
+                            <p class="what-sub to-animate">A journalist is someone who investigates, collects and presents information as a news story. News stories can be presented through <b>newspapers, magazines, radio, television</b> and the <b>internet</b>.</p>
                         </div>
-                        <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+                        <div class="col-md-8 col-md-offset-2 what-section-heading text-center">
                             <div class="embed-responsive embed-responsive-4by3">
-                                <div class="svgframe">
-                                    <iframe class="embed-responsive-item" src="test.html"></iframe>
-                                </div>
+                                
+                  <iframe class="svgframe" scrolling="no" src="test.html"></iframe>
+                               
                             </div>
                         </div>
 
@@ -140,12 +181,21 @@
                 <div id="what-testimony" data-section="testimonies">
                           <div class="col-md-8 col-md-offset-2 what-section-heading text-center">
                             <h2 class="what-lead to-animate">What is News?</h2>
-                              <p class="what-sub to-animate">Journalism is writing that tells people what happens. Sometimes, this writing comes out as a well-supported personal point-of-view or opinion.</p>
+                              <p class="what-author what-uppercase-sm what-sub to-animate">What makes a story “newsworthy” is generally based on the following criteria:
+
+<li class="what-author what-uppercase-sm to-animate">Is it new?</li>
+<li class="what-author what-uppercase-sm to-animate">Is it interesting or significant?</li>
+<li class="what-author what-uppercase-sm to-animate">Is it unusual?</li>
+<li class="what-author what-uppercase-sm to-animate">Is it about people?</li>
+</p>
                             </div>
-                    <div class="container">
+                
+
+                    <div class="container to-animate">
                         
                         <div class="row animate-box">
-                       
+                             <center><h2 class=what-lead to-animate fadeInUp animated>Types of News Stories</h2>
+                       </center>
                             <div class="owl-carousel">
                                 
 
@@ -187,8 +237,9 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-8 col-md-offset-2 what-section-heading text-center">
-                                    <h2 class="what-lead to-animate">News or Opinion?</h2>
+                                    <h2 class="what-lead to-animate">When is it News or Opinion?</h2>
                                     <p class="what-sub to-animate">Journalism is writing that tells people what happens. Sometimes, this writing comes out as a well-supported personal point-of-view or opinion.</p>
+                               
                                      <h4 class="what-uppercase-sm what-text to-animate">Opinion Journalism Examples</h4>
                                 </div>
                                 <div class="col-md-4 what-text-wrap">
@@ -213,24 +264,32 @@
                                             <h4 class="what-uppercase-sm">Reviews</h4>
                                             <p>Such as concert, restaurant or movie reviews.</p>
                                         </div>
+                               
+                                
+                                        <div class="col-md-12 col-sm-6 col-xs-6 col-xxs-12 what-text animate-object features-2-animate-6">
+                                            <span class="what-icon"><i class="icon-mustache"></i></span>
+                                            <h4 class="what-uppercase-sm">Cartoons</h4>
+                                            <p>Many editorial cartoons offer opinionated political commentary in the form of satire or jokes.</p>
+                                        </div>
 
                                     </div>
                                 </div>
+                            
                                 <div class="owl-carousel owl-theme owl-responsive-0 owl-loaded">
                                 <div class="item">
                                 <div class="col-md-4 col-md-pull-4 what-image animate-object features-2-animate-2">
-                                        <img src="images/comic.png" class="" alt="Outline Free HTML5 Responsive Bootstrap Template">
+                                        <img src="images/comic.png" class="" alt="Political Comic">
                                 </div>
                                 </div>
                                 
                                 <div class="item">
                                 <div class="col-md-4 col-md-pull-4 what-image animate-object features-2-animate-2">
-                                        <img src="images/column.png" class="" alt="Outline Free HTML5 Responsive Bootstrap Template">
+                                        <img src="images/column.png" class="" alt="Editorial Column">
                                 </div>
                                 </div>
                                 <div class="item">
                                 <div class="col-md-4 col-md-pull-4 what-image animate-object features-2-animate-2">
-                                        <img src="images/movie.png" class="" alt="Outline Free HTML5 Responsive Bootstrap Template">
+                                        <img src="images/movie.png" class="" alt="Movie Review">
                                 </div>
                                     </div>
                                 </div>
@@ -241,31 +300,31 @@
                 </div>
 
 
-
-
-                <div id="what-counter" class="what-bg-section" style="background-image: url(images/bg_1.jpg); background-attachment: fixed;">
+               
+                            
+                            <div class="what-bg-section cta" id="what-cta" style="background-image: url(images/hero_bg.jpg); background-attachment: fixed;" scroll="false">
                     <div class="what-overlay"></div>
                     <div class="container">
-         
-                    </div>
-                </div>
-
-
-                <div id="what-products" data-section="products">
-
-                    <div class="container">
                         <div class="row">
-                            <div class="col-md-8 col-md-offset-2 what-section-heading text-center">
-                                       <h2 class="what-lead animate-single features3-animate-1">Test Yourself! </h2>
-                                <p class="what-sub animate-single features3-animate-2">
-                                    Below are some news stories from the New York Times. Swipe the news card <span>left</span> if the story is an <span>opinion</span> article. Swipe <span>right</span> for <span>news</span>.
-                                </p>
-                                
-                                <a href="http://developer.nytimes.com."><img class="nytattrib" src="http://static01.nytimes.com/packages/images/developer/logos/poweredby_nytimes_150c.png"> </a>
+                            <div class="col-md-12">
+                                <div class="what-hero-wrap">
+                                    <div class="what-hero-intro text-center">
+                                        <div class="row">
+                                            <div class="col-md-8 col-md-offset-2 what-section-heading text-center">
+                                                <h2 class="what-lead to-animate">Test Yourself!</h2>
+                                                <p class="what-sub to-animate">Below are some news stories from the New York Times. Swipe the news card <span>left</span> if the story is an <span>opinion</span> article. Swipe <span>right</span> for <span>news</span>.</p>
+                                                <div class="to-animate">
+                                                 <a href="http://developer.nytimes.com."><img class="nytattrib" src="http://static01.nytimes.com/packages/images/developer/logos/poweredby_nytimes_150c.png"> </a>
             
 
 
-            <span>{{score}} / {{total}}</span>
+                    </div>
+
+
+        <body ng-app="card-stack-demo">
+            <div id="viewport" ng-controller="card-stack-playground">
+                
+                <span>{{score}} / {{total}}</span>
 
 
             <div class="item item-body">
@@ -280,12 +339,8 @@
                     </ul>
                 </div>
             </div>
-        </div>
-
-        <body ng-app="card-stack-demo">
-            <div id="viewport" ng-controller="card-stack-playground">
                 <ul class="stack" swing-stack>
-                    <li swing-card swing-on-throwout="console.log(eventName, eventObject)" swing-on-throwoutleft="console.log(eventName, eventObject)" swing-on-throwoutright="console.log(eventName, eventObject)" swing-on-throwin="console.log(eventName, eventObject)" swing-on-dragstart="console.log(eventName, eventObject)" swing-on-dragmove="console.log(eventName, eventObject)" swing-on-dragend="console.log(eventName, eventObject)" ng-repeat="card in cards" ng-class="card.name">
+                    <li swing-card swing-on-throwout="console.log(eventName, eventObject)" swing-on-throwoutleft="throwoutleft(card)" swing-on-throwoutright="throwoutright(card)" swing-on-throwin="console.log(eventName, eventObject)" swing-on-dragstart="console.log(eventName, eventObject)" swing-on-dragmove="console.log(eventName, eventObject)" swing-on-dragend="console.log(eventName, eventObject)" ng-repeat="card in cards" ng-class="card.name">
                         <div class="subhead">
 
                             New York Times -
@@ -315,87 +370,8 @@
                 
             </div>
 
-
-           
-
             </div>
-
-                <div id="what-features-3" data-section="benefits">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2 what-section-heading text-center">
-                                <h2 class="what-lead animate-single features3-animate-1">Benefits of this App</h2>
-                                <p class="what-sub animate-single features3-animate-2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
-
-                            <div class="col-md-4 col-sm-6 text-center what-text-wrap">
-                                <div class="what-text to-animate">
-                                    <span class="what-icon"><i class="icon-screen-desktop"></i></span>
-                                    <h4 class="what-uppercase-sm">Cross platform support</h4>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 text-center what-text-wrap">
-                                <div class="what-text to-animate">
-                                    <span class="what-icon"><i class="icon-graph"></i></span>
-                                    <h4 class="what-uppercase-sm">Cross platform support</h4>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                </div>
-                            </div>
-
-                            <div class="clearfix visible-sm-block"></div>
-
-                            <div class="col-md-4 col-sm-6 text-center what-text-wrap">
-                                <div class="what-text to-animate">
-                                    <span class="what-icon"><i class="icon-anchor"></i></span>
-                                    <h4 class="what-uppercase-sm">Cross platform support</h4>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 col-sm-6 text-center what-text-wrap">
-                                <div class="what-text to-animate">
-                                    <span class="what-icon"><i class="icon-camera"></i></span>
-                                    <h4 class="what-uppercase-sm">Cross platform support</h4>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                </div>
-                            </div>
-
-                            <div class="clearfix visible-sm-block"></div>
-
-                            <div class="col-md-4 col-sm-6 text-center what-text-wrap">
-                                <div class="what-text to-animate">
-                                    <span class="what-icon"><i class="icon-present"></i></span>
-                                    <h4 class="what-uppercase-sm">Cross platform support</h4>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 text-center what-text-wrap">
-                                <div class="what-text to-animate">
-                                    <span class="what-icon"><i class="icon-energy"></i></span>
-                                    <h4 class="what-uppercase-sm">Cross platform support</h4>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                </div>
-                            </div>
-
-
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="what-bg-section cta" id="what-cta" style="background-image: url(images/hero_bg.jpg); background-attachment: fixed;">
-                    <div class="what-overlay"></div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="what-hero-wrap">
-                                    <div class="what-hero-intro text-center">
-                                        <div class="row">
-                                            <div class="col-md-8 col-md-offset-2 what-section-heading text-center">
-                                                <h2 class="what-lead to-animate">Try Outline App today!</h2>
-                                                <p class="what-sub to-animate">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                                <div class="to-animate"><a href="#" class="btn btn-primary">Get Started!</a></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -405,103 +381,19 @@
                     </div>
                 </div>
 
-                <div id="what-pricing" data-section="pricing">
+                <div id="what-features-3" data-section="benefits">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2 what-section-heading text-center">
-                                <h2 class="what-lead animate-single pricing-animate-1">Plans built for every one</h2>
-                                <p class="what-sub animate-single pricing-animate-2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <h2 class="what-lead animate-single features3-animate-1">More to Come!</h2>
+                                <p class="what-sub animate-single features3-animate-2">Thanks for reading! This project is in BETA, so please subscribe for updates!</p>
                             </div>
 
-                            <div class="col-md-3 to-animate">
-                                <a href="#" class="what-figure">
-                                    <span class="what-price">$1<span>/month</span></span>
-                                    <h3 class="what-figure-lead">Starter</h3>
-                                    <p class="what-figure-text">Far far away behind the word mountains</p>
-                                </a>
-                            </div>
-                            <div class="col-md-3 to-animate">
-                                <a href="#" class="what-figure">
-                                    <span class="what-price">$25<span>/month</span></span>
-                                    <h3 class="what-figure-lead">Regular</h3>
-                                    <p class="what-figure-text">Far far away behind the word mountains</p>
-                                </a>
-                            </div>
-                            <div class="col-md-3 to-animate">
-                                <a href="#" class="what-figure active pricing-feature">
-                                    <span class="what-price">$59<span>/month</span></span>
-                                    <h3 class="what-figure-lead">Plus</h3>
-                                    <p class="what-figure-text">Far far away behind the word mountains</p>
-                                </a>
-                            </div>
-                            <div class="col-md-3 to-animate">
-                                <a href="#" class="what-figure">
-                                    <span class="what-price">$125<span>/month</span></span>
-                                    <h3 class="what-figure-lead">Enterprise</h3>
-                                    <p class="what-figure-text">Far far away behind the word mountains</p>
-                                </a>
-                            </div>
-                        </div>
+                            
                     </div>
                 </div>
 
-                <div id="what-faqs" data-section="faqs">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2 what-section-heading text-center">
-                                <h2 class="what-lead animate-single faqs-animate-1">Frequently Ask Questions</h2>
-                                <p class="what-sub animate-single faqs-animate-2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="container">
-                        <div class="faq-accordion active to-animate">
-                            <span class="faq-accordion-icon-toggle active"><i class="icon-arrow-down"></i></span>
-                            <h3>What is Outline?</h3>
-                            <div class="faq-body" style="display: block;">
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-                            </div>
-                        </div>
-                        <div class="faq-accordion to-animate">
-                            <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
-                            <h3>Is Outline Free?</h3>
-                            <div class="faq-body">
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-                            </div>
-                        </div>
-                        <div class="faq-accordion to-animate">
-                            <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
-                            <h3>How do I use Outline Features?</h3>
-                            <div class="faq-body">
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-                            </div>
-                        </div>
-                        <div class="faq-accordion to-animate">
-                            <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
-                            <h3>Which version of iOS do your apps support?</h3>
-                            <div class="faq-body">
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-                            </div>
-                        </div>
-                        <div class="faq-accordion to-animate">
-                            <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
-                            <h3>What languages are available?</h3>
-                            <div class="faq-body">
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-                            </div>
-                        </div>
-                        <div class="faq-accordion to-animate">
-                            <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
-                            <h3>I have technical problem, who do I email?</h3>
-                            <div class="faq-body">
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                
                 <div id="what-subscribe">
                     <div class="container">
                         <div class="row animate-box">
@@ -532,9 +424,6 @@
                 </div>
 
 
-            </div>
-        </div>
-
         <footer id="what-footer" style="">
             <div class="what-overlay"></div>
             <div class="what-footer-content">
@@ -545,47 +434,41 @@
                             <ul>
                                 <li><a href="http://newsela.com">Newsela</a></li>
                                 <li><a href="http://www.newsy.com/">Newsy</a></li>
-                                <li><a href="#">Jobs</a></li>
-                                <li><a href="http://tweentribune.com/">Blog</a></li>
-                                <li><a href="#">New Features</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="http://learning.blogs.nytimes.com/?module=BlogMain&action=Click&region=Header&pgtype=Blogs&version=Blog%20Category">The New York Times' Learning Network</a></li>
+                                <li><a href="http://tweentribune.com/">Smithsonian Tween Tribune</a></li>
+                                <li><a href="http://www.cnn.com/studentnews">CNN Student News</a></li>
+                                <li><a href="https://www.washingtonpost.com/lifestyle/kidspost/">The Washington Post's KidsPost</a></li>
                             </ul>
                         </div>
                         <div class="col-md-3 col-sm-4 col-md-push-3">
-                            <h3 class="what-lead">Write</h3>
+                            <h3 class="what-lead">Practice</h3>
                             <ul>
-                                <li><a href="#">Help Center</a></li>
-                                <li><a href="#">Terms of Service</a></li>
-                                <li><a href="#">Security</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Careers</a></li>
-                                <li><a href="#">More Apps</a></li>
+                                <li><a href="https://studentreportinglabs.org/">PBS NewsHour Student Reporting Labs</a></li>
+                                <li><a href="http://studentpress.org/nspa/resources/resources-for-students/">Resources for Journalism Students</a></li>
+                                <li><a href="https://medium.com/@Journalism2ls/75-tools-for-investigative-journalists-7df8b151db35#.k0okbiwly">95 Tools for Investigative Journalists</a></li>
+                                <li><a href="http://www.schooljournalism.org/websites-and-web-apps/">Journalism Websites and Web Apps</a></li>
                             </ul>
                         </div>
                         <div class="col-md-3 col-sm-4 col-md-push-3">
                             <h3 class="what-lead">Learn</h3>
                             <ul>
-                                <li><a href="#">Feedback</a></li>
-                                <li><a href="#">Frequently Ask Questions</a></li>
-                                <li><a href="#">Terms of Service</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Careers</a></li>
-                                <li><a href="#">More Apps</a></li>
+                                <li><a href="http://newsroom14.journalists.org/hack-the-planet/">Should Journalists Learn to Code?</a>
+                                </li>
+                                <li><a href="http://www.poynter.org/">The Poynter Institute for Media Studies</a></li>
+                                <li><a href="http://www.verificationhandbook.com/">Verification Handbook</a></li>
+                                <li><a href="http://www.robertniles.com/stats/">Stats for Writers</a></li>
+                                <li><a href="http://www.smalldatajournalism.com/readings/">Suggested Readings List by Dan Nguyen</a></li>
+                                <li><a href="http://www.spj.org/foi-guide-students.asp">Freedom of Information Act Student Guide</a></li>
+                                <li><a href="http://www.skilledup.com/articles/learn-journalism-online-free">Learn Journalism Online for Free </a></li>
                             </ul>
                         </div>
 
                         <div class="col-md-3 col-sm-12 col-md-pull-9">
-                            <div class="what-footer-logo"><a href="index.html">Outline</a></div>
+                            <div class="what-footer-logo"><a href="index.html">What is News?</a></div>
                             <p class="what-copyright"><small>&copy;  <script type="text/javascript">
                             document.write(new Date().getFullYear());
                         </script>. All Rights Reserved. <br>	by <a href="http://www.beatricekatcher.com/" target="_blank">Beatrice Katcher</a> </small></p>
-                            <p class="what-social-icons">
-                                <a href="#"><i class="icon-twitter"></i></a>
-                                <a href="#"><i class="icon-facebook"></i></a>
-                                <a href="#"><i class="icon-instagram"></i></a>
-                                <a href="#"><i class="icon-dribbble"></i></a>
-                                <a href="#"><i class="icon-youtube"></i></a>
-                            </p>
+                            
                         </div>
 
                     </div>
@@ -595,10 +478,14 @@
     </div>
 
     <!-- Necessary scripts -->
+<!-- FakeLoader -->
+            <script type="text/javascript">
+$("#fakeloader").fakeLoader();
+</script>
 
     <!-- jQuery -->
-    <script src="js/jquery.min.js"></script>
-    <script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
     <!-- jQuery Easing -->
     <script src="js/jquery.easing.1.3.js"></script>
     <!-- Bootstrap -->
@@ -613,7 +500,6 @@
     <script src="js/jquery.countTo.js"></script>
     <!-- Main JS -->
     <script src="js/main.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <script src="js/angular-resource.min.js"></script>
     <script src="js/jquery.actual.min.js"></script>
@@ -623,12 +509,12 @@
     <script src="deploy/parallax.js"></script>
     <script src="deploy/parallax.min.js"></script>
     <script>
+        
+        
         // Nothing new here...it's all in the CSS!
         var scene = document.getElementById('scene');
         var parallax = new Parallax(scene);
-    </script>
-
-
+            </script>
 
 
 

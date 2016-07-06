@@ -394,15 +394,17 @@ h1, h2, h3, h4, h5, h6 {
    
 }
         
+        
+        
 .svgframe {
     
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+    width: 100% \9;
     overflow: hidden;
     display: block;
     
@@ -410,11 +412,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .hands {
     
-    height: 458px;
+    
+    @media screen and (max-width: $screen-md) {
+				bottom: 0;
+				bottom: -4em;
+			}
+			@media screen and (max-width: $screen-sm) {
+				height: 458px;
     /* width: calc(100% - 100px); */
     top: -48px;
     right: 40px;
     position: relative;
+			}
 }
 
 
@@ -764,6 +773,8 @@ h1, h2, h3, h4, h5, h6 {
 		}
 	}
 }
+
+
 .what-feature, .what-figure {
 	display: block;
 	color: $brand-darker;

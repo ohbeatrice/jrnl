@@ -607,6 +607,26 @@
 		} , { offset: '75%' } );
 
 	};
+    
+    //Menu Animation
+
+            
+        $(window).scroll(function() {
+    var nav = $('#custom-bootstrap-menu');
+    var body = $('body');
+    var top = 100;
+    if ($(window).scrollTop() >= top) {
+
+        nav.addClass('navbar-fixed-top');
+        body.addClass('padding-fifty');
+        $('.navbar-brand').addClass('visible');
+
+    } else {
+        nav.removeClass('navbar-fixed-top');
+        body.removeClass('padding-fifty');
+        $('.navbar-brand').removeClass('visible');
+    }
+});
 
 
 	// Reflect scrolling in navigation
