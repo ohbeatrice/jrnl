@@ -418,13 +418,22 @@ h1, h2, h3, h4, h5, h6 {
 				bottom: -4em;
 			}
 			@media screen and (max-width: $screen-sm) {
-				height: 458px;
+				height: 1290px;
     /* width: calc(100% - 100px); */
-    top: -48px;
+    top: -158px;
     right: 40px;
     position: relative;
 			}
+	
+	/* Landscape phone to desktop */
+@media (max-width: 1199px) { height: 1290px;
+    /* width: calc(100% - 100px); */
+    top: -158px;
+    right: 40px;
+    position: relative; }
+
 }
+
 
 
 .bluegrayarm {
@@ -518,7 +527,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 // Features
-// #what-features {
+#what-features {
 #what-clients {
 	padding: 2em 0;
 	background: $brand-primary;

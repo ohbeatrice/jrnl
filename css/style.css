@@ -6113,26 +6113,20 @@ h1, h2, h3, h4, h5, h6 {
         z-index:10;
       overflow: hidden;
       display: block; }
-    @media screen and (max-width: 992px) {
-        #what-hero .what-intro .hands  {
-        height: 458px;
-      /* width: calc(100% - 100px); */
-      top: -48px;
-      right: 40px;
-      position: relative; } }
-      @media screen and (max-width: 768px) {
-        #what-hero .what-intro .hands  {
-           height: 458px;
-      /* width: calc(100% - 100px); */
-      top: -48px;
-      right: 40px;
-            position: relative; }}
-    #what-hero .what-intro .hands {height: 458px;
+
+    #what-hero .what-intro .hands {
+		height: 458px;
       /* width: calc(100% - 100px); */
       top: -48px;
       right: 40px;
       position: relative;
-       }
+		@media (max-width: @screen-sm-max) {
+    height: 1290px;
+    /* width: calc(100% - 100px); */
+    top: -158px;
+    right: 40px;
+    position: relative; }
+}
     #what-hero .what-intro .bluegrayarm {
       height: 1230px;
       width: calc(100% - 100px);
@@ -6536,7 +6530,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.1); }
 
 #what-products {
-  background: #fafafa; }
+  background: #675A84; }
 
 .what-uppercase-sm {
   font-size: 12px;

@@ -82,7 +82,22 @@
     <script src="node_modules/angular-swing/examples/card-stack/card-stack.js"></script>
     <script src="node_modules/angular-swing/dist/swing.js"></script>
     
-    <script src="js/fakeLoader.min.js"></script>
+    <!-- =========================
+       Preloader
+    ============================== -->
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            "use strict";
+            new QueryLoader2(document.querySelector("body"), {
+                barColor: "#59B1CF",
+                backgroundColor: "#111",
+                percentage: true,
+                barHeight: 1,
+                minimumTime: 200,
+                fadeOutTime: 1000
+            });
+        });
+    </script>
     <!-- FOR IE9 below -->
     <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -92,72 +107,57 @@
 
 <body>
     
-    <div id="fakeLoader"></div>
+   <div id="what-offcanvass">
+		<ul>
+			<li class="active"><a href="#" data-nav-section="home">Top</a></li>
+			<li><a href="#" data-nav-section="features">Who?</a></li>
+			<li><a href="#" data-nav-section="testimonies">What?</a></li>
+			<li><a href="#" data-nav-section="design">What?</a></li>
+			<li><a href="#" data-nav-section="products">Where?</a></li>
+			<li><a href="#" data-nav-section="benefits">Benefits</a></li>
+			<li><a href="#" data-nav-section="pricing">Pricing</a></li>
+			<li><a href="#" data-nav-section="footer">How?</a></li>
+		</ul>
+		
+	</div>
+	
+	<div id="what-menu" class="navbar">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<a href="#" class="js-what-nav-toggle what-nav-toggle" data-toggle="collapse" data-target="#what-navbar" aria-expanded="false" aria-controls="navbar"><span>Menu</span> <i></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
 
     <div id="what-page">
         <div id="what-wrap">
             <header id="what-hero" data-section="home" role="banner" style="background: url(images/WoodPanel.png) top left; background-size: cover;">
                 <div class="what-overlay"></div>
-                <div class="what-intro">
-                    <div class="container">
-                        <div class="row">
+				<div class="what-intro">
+					<div class="container">
+						<div class="row">
                             <ul id="scene" class="container" data-invert-x="false" data-invert-y="true">
 
 
                                 <li class="layer" data-depth="0.10">
-                                    <img class="whitepaperbg" src="../what/assets/images/svgs/newpaper.svg">
+                                    <img class="whitepaperbg" src="images/svgs/newpaper.svg">
                                 </li>
-                                <li class="layer" data-depth="0.80"><img class="hands" src="../what/assets/images/svgs/newhands.svg">
-                                </li>
-
-                                <li class="layer" data-depth="0.80"><img class="grayorange" src="../what/assets/images/svgs/GrayArmOrange.svg">
-                                </li>
+                                <li class="layer" data-depth="0.80"><img class="hands" src="images/svgs/handslrg.svg">
+								</li>
 
                             </ul>
 
                         </div>
-                    </div>
-                </div>
-            </header>
-            <!-- END .header -->
-        </div>
+					</div>						
+				</div>
+			</header>
+			<!-- END .header -->
+       
         
-        <nav id="custom-bootstrap-menu" class="navbar navbar-default">
-<div class="container-fluid">
-
-<!-- BRAND -->
-<div class="navbar-header">
-<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#alignment-example" aria-expanded="false">
-<span class="sr-only">Toggle navigation</span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-<a class="navbar-brand" href="#">What is News?</a>
-</div>
-
-<!-- COLLAPSIBLE NAVBAR -->
-<div class="collapse navbar-collapse" id="alignment-example">
-
-<!-- Links -->
-<ul class="nav navbar-nav">
-<li><a href="#what-features">Who?</a></li>
-<li><a href="#what-testimony">What?</a></li>
-<li class="dropdown">
-<a href="#what-features-2" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">When <span class="caret"></span></a>
-<ul class="#dropdown-menu" aria-labelledby="about-us">
-<li><a href="#what-hero-intro">Opinion Game</a></li>
-    </ul>
-    </li>
-    <li><a href="#">Where?</a></li>
-    <li><a href="#">Why?</a></li>
-    <li><a href="#what-footer">How?</a></li>
-    </ul>
-    </div>
-    </nav>
-
+        
             <div id="what-features" data-section="features">
-
 
                 <div class="container">
                     <div class="row">
@@ -165,7 +165,8 @@
                             <h2 class="what-lead to-animate">Who is a Journalist?</h2>
                             <p class="what-sub to-animate">A journalist is someone who investigates, collects and presents information as a news story. News stories can be presented through <b>newspapers, magazines, radio, television</b> and the <b>internet</b>.</p>
                         </div>
-                        <div class="col-md-8 col-md-offset-2 what-section-heading text-center">
+                        <div class="col-md-4 col-md-offset-4 text-center to-animate fadeInUp animated">
+								
                             <div class="embed-responsive embed-responsive-4by3">
                                 
                   <iframe class="svgframe" scrolling="no" src="test.html"></iframe>
@@ -174,135 +175,66 @@
                         </div>
 
                     </div>
-
-
-                </div>
-
-                <div id="what-testimony" data-section="testimonies">
-                          <div class="col-md-8 col-md-offset-2 what-section-heading text-center">
-                            <h2 class="what-lead to-animate">What is News?</h2>
-                              <p class="what-author what-uppercase-sm what-sub to-animate">What makes a story “newsworthy” is generally based on the following criteria:
-
-<li class="what-author what-uppercase-sm to-animate">Is it new?</li>
-<li class="what-author what-uppercase-sm to-animate">Is it interesting or significant?</li>
-<li class="what-author what-uppercase-sm to-animate">Is it unusual?</li>
-<li class="what-author what-uppercase-sm to-animate">Is it about people?</li>
-</p>
-                            </div>
-                
-
-                    <div class="container to-animate">
-                        
-                        <div class="row animate-box">
-                             <center><h2 class=what-lead to-animate fadeInUp animated>Types of News Stories</h2>
-                       </center>
-                            <div class="owl-carousel">
-                                
-
-                                <div class="item">
-                                    
-                                    <div class="col-md-9 col-sm-9 col-xs-8 col-xxs-12">
-                                          <h4 class="what-uppercase-sm">Breaking News</h4>
-                                       <img src="images/svgs/Breaking.svg"/>
-                                        <p class="what-author what-uppercase-sm">Telling about an important event as it happens.</p>
-                                    </div>
-                                </div>
-
-                                <div class="item">
-                            
-                                    <div class="col-md-9 col-sm-9 col-xs-8 col-xxs-12">
-                                          <h4 class="what-uppercase-sm">Feature Stories</h4>
-                                        <img src="images/svgs/Space.svg"/>
-                                        <p class="what-author what-uppercase-sm">A detailed look at something interesting that's <span>not</span> breaking news.</p>
-                                    </div>
-                                </div>
-
-                                <div class="item">
-                                    <div class="col-md-9 col-sm-9 col-xs-8 col-xxs-12">
-                                          <h4 class="what-uppercase-sm">Investigative Stories</h4>
-                                        <img src="images/svgs/Invest.svg"/>
-                                        <p class="what-author what-uppercase-sm">Investigative journalism is when reporters deeply investigate a single topic such as serious crimes, political corruption, or corporate wrongdoing.</p>
-                                    </div>
-
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                </div>
-                <div id="what-features-2" data-section="design">
-                    <div class="what-features-2-content">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-8 col-md-offset-2 what-section-heading text-center">
-                                    <h2 class="what-lead to-animate">When is it News or Opinion?</h2>
-                                    <p class="what-sub to-animate">Journalism is writing that tells people what happens. Sometimes, this writing comes out as a well-supported personal point-of-view or opinion.</p>
-                               
-                                     <h4 class="what-uppercase-sm what-text to-animate">Opinion Journalism Examples</h4>
-                                </div>
-                                <div class="col-md-4 what-text-wrap">
-                                    <div class="row text-center">
-                                        <div class="col-md-12 col-sm-6 col-xs-6 col-xxs-12 what-text animate-object features-2-animate-3">
-                                            <span class="what-icon"><i class="icon-notebook"></i></span>
-                                            <h4 class="what-uppercase-sm">Editorials</h4>
-                                            <p>Unsigned articles that express a publication's opinion.</p>
-                                        </div>
-                                        <div class="col-md-12 col-sm-6 col-xs-6 col-xxs-12 what-text animate-object features-2-animate-4">
-                                            <span class="what-icon"><i class="icon-book-open"></i></span>
-                                            <h4 class="what-uppercase-sm">Columns</h4>
-                                            <p>Signed articles that express the writer's reporting and his conclusions.</p>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-md-push-4 what-text-wrap">
-                                    <div class="row text-center">
-                                        <div class="col-md-12 col-sm-6 col-xs-6 col-xxs-12 what-text animate-object features-2-animate-5">
-                                            <span class="what-icon"><i class="icon-film"></i></span>
-                                            <h4 class="what-uppercase-sm">Reviews</h4>
-                                            <p>Such as concert, restaurant or movie reviews.</p>
-                                        </div>
-                               
-                                
-                                        <div class="col-md-12 col-sm-6 col-xs-6 col-xxs-12 what-text animate-object features-2-animate-6">
-                                            <span class="what-icon"><i class="icon-mustache"></i></span>
-                                            <h4 class="what-uppercase-sm">Cartoons</h4>
-                                            <p>Many editorial cartoons offer opinionated political commentary in the form of satire or jokes.</p>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            
-                                <div class="owl-carousel owl-theme owl-responsive-0 owl-loaded">
-                                <div class="item">
-                                <div class="col-md-4 col-md-pull-4 what-image animate-object features-2-animate-2">
-                                        <img src="images/comic.png" class="" alt="Political Comic">
-                                </div>
-                                </div>
-                                
-                                <div class="item">
-                                <div class="col-md-4 col-md-pull-4 what-image animate-object features-2-animate-2">
-                                        <img src="images/column.png" class="" alt="Editorial Column">
-                                </div>
-                                </div>
-                                <div class="item">
-                                <div class="col-md-4 col-md-pull-4 what-image animate-object features-2-animate-2">
-                                        <img src="images/movie.png" class="" alt="Movie Review">
-                                </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+ 					</div>
 
                 </div>
 
+                <div id="what-products" data-section="products">
 
-               
-                            
-                            <div class="what-bg-section cta" id="what-cta" style="background-image: url(images/hero_bg.jpg); background-attachment: fixed;" scroll="false">
+				    <div class="container">
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2 what-section-heading text-center">
+								<h2 class="what-lead animate-single product-animate-1">What is News?</h2>
+								<p class="what-sub animate-single product-animate-2">What makes a story “newsworthy” is generally based on the following criteria:</p>
+							</div>
+						
+
+							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+								<a href="images/product_1.jpg" class="what-figure to-animate image-popup">
+									<figure>
+										<img src="images/pngs/new.png" alt="Free HTML5 Responsive Template" class="img-responsive">
+									</figure>
+									<h3 class="what-figure-lead">Is it New?</h3>
+									<p class="what-figure-text">Uncovering information that few people knew.</p>
+								</a>
+							</div>
+							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+								<a href="images/product_2.jpg" class="what-figure to-animate image-popup">
+									<figure>
+										<img src="images/pngs/significant.png" alt="Free HTML5 Responsive Template" class="img-responsive">
+									</figure>
+									<h3 class="what-figure-lead">Is it Interesting or Significant?</h3>
+									<p class="what-figure-text">How will space travel impact your life?</p>
+								</a>
+							</div>
+							<div class="clearfix visible-sm-block"></div>
+							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+								<a href="images/product_3.jpg" class="what-figure to-animate image-popup">
+									<figure>
+										<img src="images/pngs/unusual.png" alt="Free HTML5 Responsive Template" class="img-responsive">
+									</figure>
+									<h3 class="what-figure-lead">Is it Unusual?</h3>
+									<p class="what-figure-text">Weird, strange but true stories.</p>
+								</a>
+							</div>
+							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+								<a href="images/product_4.jpg" class="what-figure to-animate image-popup">
+									<figure>
+										<img src="images/pngs/people.png" alt="Free HTML5 Responsive Template" class="img-responsive">
+									</figure>
+									<h3 class="what-figure-lead">Is it about people?</h3>
+									<p class="what-figure-text">Real life, human interest.</p>
+								</a>
+							</div>
+
+							
+			        	</div>
+				    </div>
+				   
+				</div>
+
+            
+			<div class="what-bg-section cta" id="what-cta" style="background-image: url(images/hero_bg.jpg); background-attachment: fixed;" scroll="false">
                     <div class="what-overlay"></div>
                     <div class="container">
                         <div class="row">
@@ -311,20 +243,15 @@
                                     <div class="what-hero-intro text-center">
                                         <div class="row">
                                             <div class="col-md-8 col-md-offset-2 what-section-heading text-center">
-                                                <h2 class="what-lead to-animate">Test Yourself!</h2>
+                                                <h2 class="what-lead to-animate">Pop Quiz!</h2>
                                                 <p class="what-sub to-animate">Below are some news stories from the New York Times. Swipe the news card <span>left</span> if the story is an <span>opinion</span> article. Swipe <span>right</span> for <span>news</span>.</p>
-                                                <div class="to-animate">
-                                                 <a href="http://developer.nytimes.com."><img class="nytattrib" src="http://static01.nytimes.com/packages/images/developer/logos/poweredby_nytimes_150c.png"> </a>
-            
+                                                
 
-
-                    </div>
-
-
+<div class="col-md-3 col-md-offset-3 text-center to-animate fadeInUp animated">
         <body ng-app="card-stack-demo">
             <div id="viewport" ng-controller="card-stack-playground">
                 
-                <span>{{score}} / {{total}}</span>
+                <span class="col-md-4 col-md-offset-4 text-center to-animate fadeInUp animated">{{score}} / {{total}}</span>
 
 
             <div class="item item-body">
@@ -372,14 +299,77 @@
 
             </div>
                                                 </div>
-                                            </div>
+											</div>
+										</div>
                                         </div>
                                     </div>
+								
+								<div class="col-md-4 col-md-offset-4 text-center to-animate fadeInUp animated">
+                                                 <a href="http://developer.nytimes.com."><img class="nytattrib" src="http://static01.nytimes.com/packages/images/developer/logos/poweredby_nytimes_150c.png"> </a>
+            
+
+
+                    </div>
                                 </div>
                             </div>
                         </div>
+                <div id="what-features-2" data-section="design">
+                    <div class="what-features-2-content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2 what-section-heading text-center">
+                                    <h2 class="what-lead to-animate">When is it News or Opinion?</h2>
+                                    <p class="what-sub to-animate">Journalism is writing that tells people what happens. Sometimes, this writing comes out as a well-supported personal point-of-view or opinion.</p>
+                               
+                                     <h4 class="what-uppercase-sm what-text to-animate">Opinion Journalism Examples</h4>
+                                </div>
+                                <div class="col-md-4 what-text-wrap">
+                                    <div class="row text-center">
+                                        <div class="col-md-12 col-sm-6 col-xs-6 col-xxs-12 what-text animate-object features-2-animate-3">
+                                            <span class="what-icon"><i class="icon-notebook"></i></span>
+                                            <h4 class="what-uppercase-sm">Editorials</h4>
+                                            <p>Unsigned articles that express a publication's opinion.</p>
+                                        </div>
+                                        <div class="col-md-12 col-sm-6 col-xs-6 col-xxs-12 what-text animate-object features-2-animate-4">
+                                            <span class="what-icon"><i class="icon-book-open"></i></span>
+                                            <h4 class="what-uppercase-sm">Columns</h4>
+                                            <p>Signed articles that express the writer's reporting and his conclusions.</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-md-push-4 what-text-wrap">
+                                    <div class="row text-center">
+                                        <div class="col-md-12 col-sm-6 col-xs-6 col-xxs-12 what-text animate-object features-2-animate-5">
+                                            <span class="what-icon"><i class="icon-film"></i></span>
+                                            <h4 class="what-uppercase-sm">Reviews</h4>
+                                            <p>Such as concert, restaurant or movie reviews.</p>
+                                        </div>
+                               
+                                
+                                        <div class="col-md-12 col-sm-6 col-xs-6 col-xxs-12 what-text animate-object features-2-animate-6">
+                                            <span class="what-icon"><i class="icon-mustache"></i></span>
+                                            <h4 class="what-uppercase-sm">Cartoons</h4>
+                                            <p>Many editorial cartoons offer opinionated political commentary in the form of satire or jokes.</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+								<div class="col-md-4 col-md-pull-4 what-image animate-object features-2-animate-2">
+					    			<p class="text-center">
+					    			<img src="images/iphone_blank_2.png" class="" alt="Outline Free HTML5 Responsive Bootstrap Template">
+					    			</p>
+					    		</div>
+                            
+                            </div>
+                        </div>
                     </div>
+
                 </div>
+
+
+               
+                 
 
                 <div id="what-features-3" data-section="benefits">
                     <div class="container">
@@ -423,7 +413,8 @@
                     </div>
                 </div>
 
-
+				</div>
+			</div>
         <footer id="what-footer" style="">
             <div class="what-overlay"></div>
             <div class="what-footer-content">
