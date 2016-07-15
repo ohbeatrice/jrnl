@@ -6114,18 +6114,19 @@ h1, h2, h3, h4, h5, h6 {
       overflow: hidden;
       display: block; }
 
-    #what-hero .what-intro .hands {
-		height: 458px;
+    #what-hero .what-intro .hands{
+    height: 1290px;
+    top: -158px;
+    right: 40px;
+    position: relative;}
+
+@media screen and (max-width: 768px){
+	#what-hero .what-intro .hands{
+	height: 458px;
       /* width: calc(100% - 100px); */
       top: -48px;
       right: 40px;
-      position: relative;
-		@media (max-width: @screen-sm-max) {
-    height: 1290px;
-    /* width: calc(100% - 100px); */
-    top: -158px;
-    right: 40px;
-    position: relative; }
+		position: relative;}
 }
     #what-hero .what-intro .bluegrayarm {
       height: 1230px;
@@ -6530,7 +6531,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.1); }
 
 #what-products {
-  background: #675A84; }
+  background: #2B62CB; }
 
 .what-uppercase-sm {
   font-size: 12px;
@@ -6620,6 +6621,9 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 0;
     background: #3b3d40;
     z-index: 11; }
+.white{
+	color: #FDFDFD;
+}
 
 .what-hero-wrap, .what-bg-section {
   padding: 4em 0; }
@@ -7194,7 +7198,7 @@ img.what-align-center {
 
 a > img.what-align-right {
   float: right;
-  margin: 0 0 .5em 1em; }
+  margin: 0 0git .5em 1em; }
   @media screen and (max-width: 480px) {
     a > img.what-align-right {
       width: 100%;
@@ -7210,5 +7214,8 @@ a > img.what-align-center {
   display: block;
   margin-left: auto;
   margin-right: auto; }
+
+
+
 
 /*# sourceMappingURL=style.css.map */

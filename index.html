@@ -81,6 +81,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="node_modules/angular-swing/examples/card-stack/card-stack.js"></script>
     <script src="node_modules/angular-swing/dist/swing.js"></script>
+	
+	<!-- MailMunch for What's News -->
+<!-- Paste this code right before the </head> tag on every page of your site. -->
+<script src="//a.mailmunch.co/app/v1/site.js" id="mailmunch-script" data-mailmunch-site-id="243986" async="async"></script>
     
     <!-- =========================
        Preloader
@@ -107,29 +111,7 @@
 
 <body>
     
-   <div id="what-offcanvass">
-		<ul>
-			<li class="active"><a href="#" data-nav-section="home">Top</a></li>
-			<li><a href="#" data-nav-section="features">Who?</a></li>
-			<li><a href="#" data-nav-section="testimonies">What?</a></li>
-			<li><a href="#" data-nav-section="design">What?</a></li>
-			<li><a href="#" data-nav-section="products">Where?</a></li>
-			<li><a href="#" data-nav-section="benefits">Benefits</a></li>
-			<li><a href="#" data-nav-section="pricing">Pricing</a></li>
-			<li><a href="#" data-nav-section="footer">How?</a></li>
-		</ul>
-		
-	</div>
-	
-	<div id="what-menu" class="navbar">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<a href="#" class="js-what-nav-toggle what-nav-toggle" data-toggle="collapse" data-target="#what-navbar" aria-expanded="false" aria-controls="navbar"><span>Menu</span> <i></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
+   
 
     <div id="what-page">
         <div id="what-wrap">
@@ -157,7 +139,7 @@
        
         
         
-            <div id="what-features" data-section="features">
+            <div id="what-features" data-section="whois">
 
                 <div class="container">
                     <div class="row">
@@ -169,7 +151,7 @@
 								
                             <div class="embed-responsive embed-responsive-4by3">
                                 
-                  <iframe class="svgframe" scrolling="no" src="test.html"></iframe>
+                  <iframe class="svgframe" scrolling="no" src="journalists.html"></iframe>
                                
                             </div>
                         </div>
@@ -179,13 +161,13 @@
 
                 </div>
 
-                <div id="what-products" data-section="products">
+                <div id="what-products" data-section="whatis">
 
 				    <div class="container">
 						<div class="row">
 							<div class="col-md-8 col-md-offset-2 what-section-heading text-center">
-								<h2 class="what-lead animate-single product-animate-1">What is News?</h2>
-								<p class="what-sub animate-single product-animate-2">What makes a story “newsworthy” is generally based on the following criteria:</p>
+								<h2 class="what-lead animate white">What is News?</h2>
+								<p class="white what-sub animate-single product-animate-2">What makes a story “newsworthy” is generally based on the following criteria:</p>
 							</div>
 						
 
@@ -234,7 +216,7 @@
 				</div>
 
             
-			<div class="what-bg-section cta" id="what-cta" style="background-image: url(images/hero_bg.jpg); background-attachment: fixed;" scroll="false">
+			<div class="what-bg-section cta" id="what-cta" style="background-image: url(images/purplebokeh.jpg); background-attachment: fixed;" scroll="false">
                     <div class="what-overlay"></div>
                     <div class="container">
                         <div class="row">
@@ -247,11 +229,11 @@
                                                 <p class="what-sub to-animate">Below are some news stories from the New York Times. Swipe the news card <span>left</span> if the story is an <span>opinion</span> article. Swipe <span>right</span> for <span>news</span>.</p>
                                                 
 
-<div class="col-md-3 col-md-offset-3 text-center to-animate fadeInUp animated">
+<div class="col-md-2 col-md-offset-2 text-center to-animate fadeInUp animated">
         <body ng-app="card-stack-demo">
             <div id="viewport" ng-controller="card-stack-playground">
                 
-                <span class="col-md-4 col-md-offset-4 text-center to-animate fadeInUp animated">{{score}} / {{total}}</span>
+                
 
 
             <div class="item item-body">
@@ -357,10 +339,13 @@
                                 </div>
 								<div class="col-md-4 col-md-pull-4 what-image animate-object features-2-animate-2">
 					    			<p class="text-center">
-					    			<img src="images/iphone_blank_2.png" class="" alt="Outline Free HTML5 Responsive Bootstrap Template">
-					    			</p>
+									<div class="owl-carousel">
+					    			<img src="images/column.png">
+										<img src="images/comic.png">
+										<img src="images/movie.png">
 					    		</div>
-                            
+									</p>
+							</div>
                             </div>
                         </div>
                     </div>
@@ -371,7 +356,16 @@
                
                  
 
-                <div id="what-features-3" data-section="benefits">
+               
+                
+                <div id="what-subscribe">
+                    <div class="container">
+                        <div class="row animate-box">
+                            <div class='mailmunch-forms-widget-318491'></div>
+                        </div>
+                    </div>
+                </div>
+ <div id="what-features-3" data-section="benefits">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2 what-section-heading text-center">
@@ -382,38 +376,8 @@
                             
                     </div>
                 </div>
-
-                
-                <div id="what-subscribe">
-                    <div class="container">
-                        <div class="row animate-box">
-                            <form action="#" method="post">
-                                <div class="col-md-3 col-sm-3">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="First Name">
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-3">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Last Name">
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-3">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-3">
-                                    <div class="form-group">
-                                        <input type="submit" class="btn btn-primary" value="Subscribe">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
 				</div>
+				
 			</div>
         <footer id="what-footer" style="">
             <div class="what-overlay"></div>
