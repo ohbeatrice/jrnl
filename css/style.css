@@ -6114,10 +6114,10 @@ h1, h2, h3, h4, h5, h6 {
       overflow: hidden;
       display: block; }
 
-    #what-hero .what-intro .hands{
-    height: 1290px;
+  #what-hero .what-intro .hands{
+        height: 1330px;
+    vertical-align: top;
     top: -158px;
-    right: 40px;
     position: relative;}
 
 @media screen and (max-width: 768px){
@@ -6128,6 +6128,29 @@ h1, h2, h3, h4, h5, h6 {
       right: 40px;
 		position: relative;}
 }
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) {
+	#what-hero .what-intro .hands {
+    height: 508px;
+    right: 40px;
+    position: relative;
+    vertical-align: top;
+}
+	}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { 
+	#what-hero .what-intro .hands {
+    height: 908px;
+    right: 130px;
+    position: relative;
+    vertical-align: top
+} }
+
     #what-hero .what-intro .bluegrayarm {
       height: 1230px;
       width: calc(100% - 100px);

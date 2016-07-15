@@ -6128,6 +6128,19 @@ h1, h2, h3, h4, h5, h6 {
       right: 40px;
 		position: relative;}
 }
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) {
+	#what-hero .what-intro .hands{
+	height: 458px;
+      /* width: calc(100% - 100px); */
+      top: -48px;
+      right: 40px;
+		position: relative;}
+	}
+
+
     #what-hero .what-intro .bluegrayarm {
       height: 1230px;
       width: calc(100% - 100px);
