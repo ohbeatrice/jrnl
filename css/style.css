@@ -6115,7 +6115,7 @@ h1, h2, h3, h4, h5, h6 {
       display: block; }
 
   #what-hero .what-intro .hands{
-        height: 1330px;
+        height: 1350px;
     vertical-align: top;
     top: -158px;
     position: relative;}
@@ -6123,7 +6123,6 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 768px){
 	#what-hero .what-intro .hands{
 	height: 458px;
-      /* width: calc(100% - 100px); */
       top: -48px;
       right: 40px;
 		position: relative;}
@@ -6133,8 +6132,8 @@ h1, h2, h3, h4, h5, h6 {
 and (min-device-width : 375px) 
 and (max-device-width : 667px) {
 	#what-hero .what-intro .hands {
-    height: 508px;
-    right: 40px;
+    height: 550px;
+    right: 70px;
     position: relative;
     vertical-align: top;
 }
@@ -6150,6 +6149,15 @@ and (orientation : portrait) {
     position: relative;
     vertical-align: top
 } }
+@media only screen 
+and (min-device-width : 480px) 
+and (max-device-width : 768px) 
+and (orientation : portrait) { 
+	#what-hero .what-intro .hands {
+    height: 908px;
+    right: 130px;
+    position: relative;
+		vertical-align: top}}
 
     #what-hero .what-intro .bluegrayarm {
       height: 1230px;
