@@ -6553,7 +6553,8 @@ and (orientation : portrait) {
     transform: scale(1.1); }
 
 #what-products {
-  background: #1282A2; }
+  background: #1282A2;
+overflow-x: hidden;}
 
 .what-uppercase-sm {
   font-size: 12px;
