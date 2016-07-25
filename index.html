@@ -48,7 +48,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
 	<!-- Animate.css -->
-  <link rel="stylesheet" href="animate.min.css">
+	<link rel="stylesheet" href="animate.min.css">
 	<!-- Icomoon Icon Fonts-->
 	<link rel="stylesheet" href="css/icomoon.css">
 	<!-- Simple Line Icons-->
@@ -100,6 +100,7 @@
 <body>
 
 
+
 	<div id="what-page">
 		<div id="what-wrap">
 			<header id="what-hero" data-section="home" role="banner" style="background: url(images/WoodPanel.png) top left; background-size: cover;">
@@ -122,8 +123,6 @@
 					</div>
 				</div>
 			</header>
-		</div>
-	</div>
 			<!-- END .header -->
 
 
@@ -214,18 +213,17 @@
 								<div class="what-hero-intro text-center">
 									<div class="row">
 										<div class="col-md-8 col-md-offset-2 what-section-heading text-center">
-											
+
 											<h2 class="what-lead to-animate">Pop Quiz!</h2>
 											<p class="what-sub to-animate">Below are some news stories from the New York Times. Swipe the news card <span>left</span> if the story is an <span>opinion</span> article. Swipe <span>right</span> for <span>news</span>.</p>
 
 
 											<div class="col-md-12 text-center to-animate fadeInUp animated">
 												<script>
-      $(document).ready(function() {
-        $(".viewport").lettering();
-      });
-													
-</script>
+													$(document).ready(function () {
+														$(".viewport").lettering();
+													});
+												</script>
 
 												<body ng-app="card-stack-demo" ng-controller="card-stack-playground">
 													<div id="viewport" content scroll="false">
@@ -258,23 +256,25 @@
 
 															</li>
 														</ul>
-														
+
 													</div>
 													<div class="clearfix col-sm-12"></div>
-														<div class="scores__container col-sm-12">
-															<div class="score__container">
-																<p>SCORE:
-																	<br> <span id="score" class="score">{{score}} / {{total}}</span></p>
+													<div class="scores__container col-sm-12">
+														<div class="score__container">
+															<p>SCORE:
+																<br> <span id="score" class="score">{{score}} / {{total}}</span></p>
+														</div>
+														<div id="pb-container" class="pb__container">
+															<p>
+																<!-- PERSONAL BEST CHANGING THIS: -->
+															</p>
+															<div class="item item-body success animated">
+																<h1>{{feedback}}</h1>
+
+
 															</div>
-															<div id="pb-container" class="pb__container">
-																<p> <!-- PERSONAL BEST CHANGING THIS: --> </p>
-																	<div class="item item-body success animated">
-																		<h1>{{feedback}}</h1>
-																		
-																		
-																			</div>
-																
-																<!--  <div class="item item-body">
+
+															<!--  <div class="item item-body">
 																
 																<div ng-show="wrongAnswerslist">
 																			<p> Inspect these news stories a little closer </p>
@@ -288,9 +288,9 @@
 															</div>
 														-->
 
-															</div>
 														</div>
-												
+													</div>
+
 													<!-- Preload Game Sounds -->
 													<audio preload="auto" id="pop-1">
 														<source src="http://adrianpayne.me/game/assets/sounds/pop1.mp3"></source>
@@ -317,7 +317,8 @@
 
 
 						</div>
-				
+					</div>
+				</div>
 			</div>
 			<div id="what-features-2" data-section="design">
 				<div class="what-features-2-content">
@@ -455,12 +456,8 @@
 			</div>
 		</footer>
 	</div>
-</body>
+	</body>
 	<!-- Necessary scripts -->
-	<!-- FakeLoader -->
-	<script type="text/javascript">
-		$("#fakeloader").fakeLoader();
-	</script>
 
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
@@ -492,8 +489,6 @@
 		var scene = document.getElementById('scene');
 		var parallax = new Parallax(scene);
 	</script>
-
-
 
 
 
