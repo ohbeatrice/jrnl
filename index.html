@@ -265,7 +265,7 @@
 																	</script>
 																</div>
 																<h2 class="card-title">{{card.title}}</h2>
-																<p class="headline hl4">{{card.byline}}</p>
+																<h2 class="headline hl4">{{card.byline}}</h2>
 																<img class="viewport.image" src="{{card.image.url}}" />
 																<p class="headline hl4">{{card.lead}}</p>
 
@@ -280,17 +280,17 @@
 																	<br> <span id="score" class="score">{{score}} / {{total}}</span></p>
 															</div>
 															<div id="pb-container" class="pb__container">
-																<p>PERSONAL BEST CHANGING THIS: </p>
+																<p> <!-- PERSONAL BEST CHANGING THIS: --> </p>
 																	<div class="item item-body success animated">
 																		<h1>{{feedback}}</h1>
 																		
 																		
 																			</div>
 																
-																<div class="item item-body">
+																<!--  <div class="item item-body">
 																
 																<div ng-show="wrongAnswerslist">
-																				Inspect these news stories a little closer</p>
+																			<p> Inspect these news stories a little closer </p>
 
 																			<ul>
 																				<li ng-repeat="story in wrongAnswer"><a href="{{resp[i].url}}">{{resp[i].title}}</a>
@@ -299,11 +299,11 @@
 																		</div>
 
 															</div>
-														
+														-->
 
 															</div>
 														</div>
-												</body>
+												
 													<!-- Preload Game Sounds -->
 													<audio preload="auto" id="pop-1">
 														<source src="http://adrianpayne.me/game/assets/sounds/pop1.mp3"></source>
@@ -469,7 +469,7 @@
 			</div>
 		</footer>
 	</div>
-
+</body>
 	<!-- Necessary scripts -->
 	<!-- FakeLoader -->
 	<script type="text/javascript">
@@ -516,6 +516,5 @@
 });</script>
 
 
-	</body>
 
 </html>

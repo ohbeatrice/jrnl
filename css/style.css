@@ -6328,8 +6328,7 @@ and (orientation : portrait) {
 #what-features-3,
 #what-products,
 #what-faqs {
-  position: relative;
-  padding: 7em 0; }
+  position: relative;}
   @media screen and (max-width: 768px) {
     #what-features,
     #what-features-2,
@@ -6554,7 +6553,7 @@ and (orientation : portrait) {
     transform: scale(1.1); }
 
 #what-products {
-  background: #2B62CB; }
+  background: #1282A2; }
 
 .what-uppercase-sm {
   font-size: 12px;
