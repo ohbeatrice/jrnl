@@ -219,7 +219,7 @@
 			</div>
 
 
-			<div class="what-bg-section cta" id="what-cta" style="background-image: url(images/purplebokeh.jpg); background-attachment: fixed;" scroll="false">
+			<div class="what-bg-section cta" id="what-cta" style="background-image: url(images/purplebokehsm.jpg); background-attachment: fixed;" scroll="false">
 				<div class="what-overlay"></div>
 				<div class="container">
 					<div class="row">
@@ -238,6 +238,13 @@
       $(document).ready(function() {
         $(".viewport").lettering();
       });
+													var fixed = document.getElementById('what-bg-section');
+
+fixed.addEventListener('touchmove', function(e) {
+
+        e.preventDefault();
+
+}, false);
 </script>
 
 												<body ng-app="card-stack-demo" ng-controller="card-stack-playground">
